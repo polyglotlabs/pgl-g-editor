@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    }
+}

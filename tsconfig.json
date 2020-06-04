@@ -7,16 +7,32 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "esnext",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "module": "ES2015",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
+    "target": "ES2015",
+    "jsx": "react",
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "types": ["node"],
+    "paths": {
+      "pgl-g-editor": [
+        "dist/pgl-g-editor/pgl-g-editor",
+        "dist/pgl-g-editor",
+        "projects/pgl-g-editor/src/public-api"
+      ],
+      "pgl-g-editor/*": [
+        "dist/pgl-g-editor/pgl-g-editor/*",
+        "dist/pgl-g-editor/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
+    "enableIvy": false,
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   }

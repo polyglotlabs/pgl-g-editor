@@ -1,0 +1,10 @@
+<div className="editor-nav">
+    <b *ngFor="let type of ['post', 'page']" [ngClass]="{'components-button': true,  'is-primary' : type === 'postType'}"
+        [routerLink]="types[type].rest_base">
+        {{ types[type].name }}
+    </b>
+    <button type="button" className="components-button is-tertiary" (click)="resetLocalStorage($event)">
+        Clear page and reload
+    </button>
+</div>
+<div id="editor" className="gutenberg__editor"></div>

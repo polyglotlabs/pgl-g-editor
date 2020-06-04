@@ -1,0 +1,19 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "outDir": "../../out-tsc/app",
+        "types": ["node"],
+        "jsx": "react",
+        "paths": {
+            "pgl-g-editor": [
+                "dist/pgl-g-editor/pgl-g-editor",
+                "dist/pgl-g-editor",
+                "projects/pgl-g-editor/src/public-api"
+            ]
+        }
+    },
+    "files": ["src/main.ts", "src/polyfills.ts"],
+    "include": ["src/**/*.d.ts"]
+}

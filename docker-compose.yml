@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+    server:
+        image: node:12-alpine
+        volumes:
+        - .:/src/app
+        ports:
+        - 9000:9000
+        working_dir: /src/app
+        command: sh -c "npm run server"
+    lib:
+        image: node:12-alpine
+        volumes:
+        - .:/src/app
+        working_dir: /src/app
+        command: sh -c "npm run build:watch"
+    app:
+        image: node:12-alpine
+        volumes:
+        - .:/src/app
+        ports:
+        - 4200:4200
+        working_dir: /src/app
+        command: sh -c "npm run docker"
